@@ -2,7 +2,7 @@ package com.zsmart.ir.bean;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 import javax.persistence.Column;
 
 import javax.persistence.Entity;
@@ -29,9 +29,9 @@ public class TauxIR implements Serializable {
     private BigDecimal penalite;
 
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateApplicationDebut;
+    private Date dateApplicationDebut;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateApplicationFin;
+    private Date dateApplicationFin;
 
     public Long getId() {
         return id;
@@ -81,19 +81,19 @@ public class TauxIR implements Serializable {
         this.penalite = penalite;
     }
 
-    public LocalDateTime getDateApplicationDebut() {
+    public Date getDateApplicationDebut() {
         return dateApplicationDebut;
     }
 
-    public void setDateApplicationDebut(LocalDateTime dateApplicationDebut) {
+    public void setDateApplicationDebut(Date dateApplicationDebut) {
         this.dateApplicationDebut = dateApplicationDebut;
     }
 
-    public LocalDateTime getDateApplicationFin() {
+    public Date getDateApplicationFin() {
         return dateApplicationFin;
     }
 
-    public void setDateApplicationFin(LocalDateTime dateApplicationFin) {
+    public void setDateApplicationFin(Date dateApplicationFin) {
         this.dateApplicationFin = dateApplicationFin;
     }
 

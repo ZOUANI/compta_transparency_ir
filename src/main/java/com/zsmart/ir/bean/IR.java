@@ -7,7 +7,7 @@ package com.zsmart.ir.bean;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.Column;
 
@@ -56,7 +56,7 @@ public class IR implements Serializable {
     private String referenceComptableValidateur;
     private String referenceComptableCreateur;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateValidation;
+    private Date dateValidation;
 
     private Integer anne;
     private Integer mois;// numero de mois ou de trim
@@ -70,13 +70,13 @@ public class IR implements Serializable {
     private EtatIR etatIR;
 
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateSoumission;
+    private Date dateSoumission;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateAffectationComptable;
+    private Date dateAffectationComptable;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateFinalisation;
+    private Date dateFinalisation;
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private LocalDateTime dateSaisie;
+    private Date dateSaisie;
 
     public Long getId() {
         return id;
@@ -174,15 +174,15 @@ public class IR implements Serializable {
         this.totalPrime = totalPrime;
     }
 
-    public void setDateSoumission(LocalDateTime dateSoumission) {
+    public void setDateSoumission(Date dateSoumission) {
         this.dateSoumission = dateSoumission;
     }
 
-    public void setDateAffectationComptable(LocalDateTime dateAffectationComptable) {
+    public void setDateAffectationComptable(Date dateAffectationComptable) {
         this.dateAffectationComptable = dateAffectationComptable;
     }
 
-    public void setDateFinalisation(LocalDateTime dateFinalisation) {
+    public void setDateFinalisation(Date dateFinalisation) {
         this.dateFinalisation = dateFinalisation;
     }
 
@@ -266,31 +266,31 @@ public class IR implements Serializable {
         this.referenceComptableCreateur = referenceComptableCreateur;
     }
 
-    public LocalDateTime getDateValidation() {
+    public Date getDateValidation() {
         return dateValidation;
     }
 
-    public void setDateValidation(LocalDateTime dateValidation) {
+    public void setDateValidation(Date dateValidation) {
         this.dateValidation = dateValidation;
     }
 
-    public LocalDateTime getDateSaisie() {
+    public Date getDateSaisie() {
         return dateSaisie;
     }
 
-    public void setDateSaisie(LocalDateTime dateSaisie) {
+    public void setDateSaisie(Date dateSaisie) {
         this.dateSaisie = dateSaisie;
     }
 
-    public LocalDateTime getDateSoumission() {
+    public Date getDateSoumission() {
         return dateSoumission;
     }
 
-    public LocalDateTime getDateAffectationComptable() {
+    public Date getDateAffectationComptable() {
         return dateAffectationComptable;
     }
 
-    public LocalDateTime getDateFinalisation() {
+    public Date getDateFinalisation() {
         return dateFinalisation;
     }
 
