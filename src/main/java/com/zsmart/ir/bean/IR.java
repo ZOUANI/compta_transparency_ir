@@ -26,11 +26,10 @@ import javax.persistence.Temporal;
 @Entity
 public class IR implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int nombreEmployeeDeclaree;
+    private Integer nombreEmployeeDeclaree;
     @Column(precision = 16, scale = 4)
     private BigDecimal totalSalaire;
     @Column(precision = 16, scale = 4)
@@ -50,14 +49,7 @@ public class IR implements Serializable {
 
     private Integer nomberMoisRetard;
 
-    private String description;
-    private String reference;
-    private String referenceSociete;
-    private String referenceComptableValidateur;
-    private String referenceComptableCreateur;
-    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
-    private Date dateValidation;
-
+   
     private Integer anne;
     private Integer mois;// numero de mois ou de trim
     private BigDecimal honoraire;
@@ -68,6 +60,14 @@ public class IR implements Serializable {
 
     @ManyToOne
     private EtatIR etatIR;
+
+     private String description;
+    private String reference;
+    private String referenceSociete;
+    private String referenceComptableValidateur;
+    private String referenceComptableCreateur;
+    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
+    private Date dateValidation;
 
     @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date dateSoumission;
@@ -150,11 +150,11 @@ public class IR implements Serializable {
         this.nomberMoisRetard = nomberMoisRetard;
     }
 
-    public int getNombreEmployeeDeclaree() {
+    public Integer getNombreEmployeeDeclaree() {
         return nombreEmployeeDeclaree;
     }
 
-    public void setNombreEmployeeDeclaree(int nombreEmployeeDeclaree) {
+    public void setNombreEmployeeDeclaree(Integer nombreEmployeeDeclaree) {
         this.nombreEmployeeDeclaree = nombreEmployeeDeclaree;
     }
 
